@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -47,7 +46,10 @@ public class PlacementControler : MonoBehaviour
         if (arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             var hitPose = hits[0].pose;
+            
+            
             CreateAnchor(hits[0]);
+
         } else
         {
             SSTools.ShowMessage("Model phải được đặt trên mặt phẳng", SSTools.Position.bottom, SSTools.Time.twoSecond);
@@ -57,11 +59,15 @@ public class PlacementControler : MonoBehaviour
     private ARAnchor CreateAnchor(in ARRaycastHit hit)
     {
         ARAnchor anchor;
-        ARPlane hitPlane = (ARPlane)hit.trackable;
 
+        ARPlane hitPlane = (ARPlane)hit.trackable;
         anchorManager.anchorPrefab = prefabToPlace;
+        Pose pose = hit.pose;
+        var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
+        pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
         anchor = anchorManager.AttachAnchor(hitPlane, hit.pose);
         anchorManager.anchorPrefab = null;
+
         return anchor;
     }
 }
