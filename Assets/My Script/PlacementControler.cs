@@ -28,7 +28,7 @@ public class PlacementControler : MonoBehaviour
 
     private bool TryGetTouchPosition(out Vector2 touchPosition)
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             touchPosition = Input.GetTouch(0).position;
             return true;
