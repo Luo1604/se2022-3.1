@@ -48,9 +48,6 @@ public class PlacementControler : MonoBehaviour
         {
             var hitPose = hits[0].pose;
             CreateAnchor(hits[0]);
-        } else
-        {
-            SSTools.ShowMessage("Bạn phải đặt model vào mặt phẳng đã xác nhận", SSTools.Position.bottom, SSTools.Time.twoSecond);
         }
     }
 
