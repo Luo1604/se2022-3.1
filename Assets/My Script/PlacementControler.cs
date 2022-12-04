@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -38,6 +39,8 @@ public class PlacementControler : MonoBehaviour
 
     void Update()
     {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
         if (!TryGetTouchPosition(out Vector2 touchPosition))
         {
             return;
@@ -45,15 +48,21 @@ public class PlacementControler : MonoBehaviour
 
         if (arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
+            
             var hitPose = hits[0].pose;
-            
-            
             CreateAnchor(hits[0]);
-
-        } else
+           
+        } else if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            Destroy(hit.transform.gameObject);
+            
+        } 
+        else 
         {
             SSTools.ShowMessage("Model phải được đặt trên mặt phẳng", SSTools.Position.bottom, SSTools.Time.twoSecond);
         }
+
+        
     }
 
     private ARAnchor CreateAnchor(in ARRaycastHit hit)
@@ -70,4 +79,5 @@ public class PlacementControler : MonoBehaviour
 
         return anchor;
     }
+
 }
