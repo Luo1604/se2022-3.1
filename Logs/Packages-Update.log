@@ -43,3 +43,11 @@ The following packages were updated:
   com.unity.learn.iet-framework from version 2.1.1 to 3.1.1
   com.unity.timeline from version 1.6.3 to 1.7.2
   com.unity.visualscripting from version 1.7.6 to 1.7.8
+
+=== Sun Dec  4 20:14:18 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.timeline from version 1.7.2 to 1.8.0
