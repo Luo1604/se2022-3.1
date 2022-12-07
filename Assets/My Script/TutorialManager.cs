@@ -32,9 +32,14 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    void ClickEvent() {
-        if (Input.GetMouseButtonDown(0)) {
-            popUpIndex++;
+    void ClickEvent() 
+    {
+        if (Input.touchCount > 0)
+        {
+            if (Input.touches[0].phase == TouchPhase.Began)
+            {
+                popUpIndex++;
+            }
         }
     }
 }
