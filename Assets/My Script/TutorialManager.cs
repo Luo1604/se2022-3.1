@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -26,9 +27,8 @@ public class TutorialManager : MonoBehaviour
 
         ClickEvent();
 
-        if (popUpIndex == popUps.Length) { 
-            popUps[popUpIndex - 1].SetActive(false);
-            this.enabled = false;
+        if (popUpIndex == popUps.Length) {
+            SceneManager.LoadScene("3DScenes");
         }
     }
 

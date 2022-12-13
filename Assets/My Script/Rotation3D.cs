@@ -4,29 +4,28 @@ using UnityEngine;
 
 public class Rotation3D : MonoBehaviour
 {
-    Vector3 mPrevPos = Vector3.zero;
-    Vector3 mPosDelta = Vector3.zero;
+
+    private Touch touch;
+    private Quaternion rotationY;
 
 
+    private float rotateSpeedModifier = 0.1f;
 
-    //Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)) {
-            mPosDelta=Input.mousePosition-mPrevPos;
+        if (Input.touchCount > 0)
+        {
+            touch = Input.GetTouch(0);
 
-            //Vecto3.up : Vecto3(0,1,0)
-            //Vecto3.Dot() : tra ve tich vo huong 2 vecto
-            if(Vector3.Dot(transform.up, Vector3.up) >= 0) {
-                transform.Rotate(transform.up, -Vector3.Dot(mPosDelta,Camera.main.transform.right), Space.World);
-        //     } else {
-        //         transform.Rotate(transform.up, Vector3.Dot(mPosDelta,Camera.main.transform.right), Space.World);
-        //     }
-        //     transform.Rotate(Camera.main.transform.right, Vector3.Dot(mPosDelta, Camera.main.transform.up), Space.World);
-        // }
+            if (touch.phase == TouchPhase.Moved)
+            {
+                rotationY = Quaternion.Euler(
+                    touch.deltaPosition.y * rotateSpeedModifier,
+                    -touch.deltaPosition.x * rotateSpeedModifier,
+                    0f);
+
+                transform.rotation = rotationY * transform.rotation;
             }
         }
-        mPrevPos = Input.mousePosition;
     }
-
 }
