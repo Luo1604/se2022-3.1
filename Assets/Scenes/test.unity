@@ -707,7 +707,11 @@ RectTransform:
   m_GameObject: {fileID: 731775390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
+<<<<<<< HEAD:Assets/Scenes/test.unity
   m_LocalScale: {x: 0.59497243, y: 0.59497243, z: 0.59497243}
+=======
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+>>>>>>> 69cfd30cab42c8bfee883424cf3a6ae859f9f0f0:Assets/test.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 603513261}
@@ -738,8 +742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110\u1EC3 x\xF3a v\u1EADt, nh\u1EA5n v\xE0o v\u1ECB tr\xED \u0111\xE3
-    \u0111\u1EB7t v\u1EADt"
+  m_text: "\u0110\u1EC3 x\xF3a v\u1EADt, nh\u1EA5n v\xE0o v\u1EADt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1149,7 +1152,7 @@ RectTransform:
   m_GameObject: {fileID: 1003491908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197761103}
@@ -1390,7 +1393,11 @@ RectTransform:
   m_GameObject: {fileID: 1243646905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
+<<<<<<< HEAD:Assets/Scenes/test.unity
   m_LocalScale: {x: 0.76138, y: 0.76138, z: 0.76138}
+=======
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+>>>>>>> 69cfd30cab42c8bfee883424cf3a6ae859f9f0f0:Assets/test.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 151054509}
@@ -1561,7 +1568,11 @@ RectTransform:
   m_GameObject: {fileID: 1558328056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
+<<<<<<< HEAD:Assets/Scenes/test.unity
   m_LocalScale: {x: 0.65535, y: 0.65535, z: 0.65535}
+=======
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+>>>>>>> 69cfd30cab42c8bfee883424cf3a6ae859f9f0f0:Assets/test.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2066180149}
