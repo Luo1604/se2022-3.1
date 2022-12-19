@@ -707,11 +707,7 @@ RectTransform:
   m_GameObject: {fileID: 731775390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-<<<<<<< HEAD:Assets/Scenes/test.unity
   m_LocalScale: {x: 0.59497243, y: 0.59497243, z: 0.59497243}
-=======
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
->>>>>>> 69cfd30cab42c8bfee883424cf3a6ae859f9f0f0:Assets/test.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 603513261}
@@ -742,10 +738,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110\u1EC3 x\xF3a v\u1EADt, nh\u1EA5n v\xE0o v\u1EADt"
+  m_text: "\u0110\u1EC3 x\xF3a v\u1EADt, nh\u1EA5n v\xE0o v\u1ECB tr\xED \u0111\xE3
+    \u0111\u1EB7t v\u1EADt"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d462cbec328e4148a064678d136feca, type: 2}
+  m_sharedMaterial: {fileID: 2942066641762164226, guid: 6d462cbec328e4148a064678d136feca,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -769,7 +767,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 147.2
+  m_fontSize: 145.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1152,7 +1150,7 @@ RectTransform:
   m_GameObject: {fileID: 1003491908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 197761103}
@@ -1186,8 +1184,9 @@ MonoBehaviour:
   m_text: "V\xF9ng \u0111\u01B0\u1EE3c khoanh v\xE0ng l\xE0 v\u1ECB tr\xED b\u1EA1n
     c\xF3 th\u1EC3 \u0111\u1EB7t v\u1EADt"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d462cbec328e4148a064678d136feca, type: 2}
+  m_sharedMaterial: {fileID: 2942066641762164226, guid: 6d462cbec328e4148a064678d136feca,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1211,7 +1210,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 98.95
+  m_fontSize: 96.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1393,11 +1392,7 @@ RectTransform:
   m_GameObject: {fileID: 1243646905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-<<<<<<< HEAD:Assets/Scenes/test.unity
   m_LocalScale: {x: 0.76138, y: 0.76138, z: 0.76138}
-=======
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
->>>>>>> 69cfd30cab42c8bfee883424cf3a6ae859f9f0f0:Assets/test.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 151054509}
@@ -1431,8 +1426,9 @@ MonoBehaviour:
   m_text: "\u0110\u01B0a camera v\xE0o n\u01A1i b\u1EA1n mu\u1ED1n \u0111\u1EB7t
     v\u1EADt"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d462cbec328e4148a064678d136feca, type: 2}
+  m_sharedMaterial: {fileID: 2942066641762164226, guid: 6d462cbec328e4148a064678d136feca,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1456,7 +1452,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 125.85
+  m_fontSize: 124.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1558,7 +1554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1558328057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1568,11 +1564,7 @@ RectTransform:
   m_GameObject: {fileID: 1558328056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -20}
-<<<<<<< HEAD:Assets/Scenes/test.unity
   m_LocalScale: {x: 0.65535, y: 0.65535, z: 0.65535}
-=======
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
->>>>>>> 69cfd30cab42c8bfee883424cf3a6ae859f9f0f0:Assets/test.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2066180149}
@@ -1605,8 +1597,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Nh\u1EA5n v\xE0o v\u1ECB tr\xED b\u1EA1n mu\u1ED1n \u0111\u1EB7t v\u1EADt"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d462cbec328e4148a064678d136feca, type: 2}
+  m_sharedMaterial: {fileID: 2942066641762164226, guid: 6d462cbec328e4148a064678d136feca,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1630,7 +1623,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 145.05
+  m_fontSize: 144.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
