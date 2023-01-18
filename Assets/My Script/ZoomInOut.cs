@@ -4,49 +4,38 @@ using UnityEngine;
 
 public class ZoomInOut : MonoBehaviour
 {
-    Camera mainCamera;
+    public float zoomSpeed;
+    public Camera cam;
 
-    float touchesPrevPosDifference, touchesCurPosDifference, zoomModifier;
-
-    Vector2 firstTouchPrevPos, secondTouchPrevPos;
-
-    [SerializeField]
-    float zoomModifierSpeed = 0.1f;
-
-
-
-    // Use this for initialization
     void Start()
     {
-        mainCamera = Camera.main;
+        cam = GetComponent<Camera>();
     }
-
 
     void Update()
     {
 
         if (Input.touchCount == 2)
         {
-            Touch firstTouch = Input.GetTouch(0);
-            Touch secondTouch = Input.GetTouch(1);
 
-            firstTouchPrevPos = firstTouch.position - firstTouch.deltaPosition;
-            secondTouchPrevPos = secondTouch.position - secondTouch.deltaPosition;
+            Touch touch1 = Input.GetTouch(0);
+            Touch touch2 = Input.GetTouch(1);
 
-            touchesPrevPosDifference = (firstTouchPrevPos - secondTouchPrevPos).magnitude;
-            touchesCurPosDifference = (firstTouch.position - secondTouch.position).magnitude;
 
-            zoomModifier = (firstTouch.deltaPosition - secondTouch.deltaPosition).magnitude * zoomModifierSpeed;
+            Vector2 touch1Direction = touch1.position - touch1.deltaPosition;
+            Vector2 touch2Direction = touch2.position - touch2.deltaPosition;
 
-            if (touchesPrevPosDifference > touchesCurPosDifference)
-                mainCamera.orthographicSize += zoomModifier;
-            if (touchesPrevPosDifference < touchesCurPosDifference)
-                mainCamera.orthographicSize -= zoomModifier;
+            float distancePosition = Vector2.Distance(touch1.position, touch2.position);
+            float distanceDirection = Vector2.Distance(touch1Direction, touch2Direction);
+
+
+            float zoom = distanceDirection - distancePosition;
+
+            cam.fieldOfView += zoom * zoomSpeed;
+
+            cam.fieldOfView = Mathf.Clamp(cam.fieldOfView, 10f, 85f);
+
 
         }
-
-        mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, 2f, 10f);
-
-
     }
 }
