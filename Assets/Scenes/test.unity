@@ -917,8 +917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110\u1EC3 x\xF3a v\u1EADt, nh\u1EA5n v\xE0o v\u1ECB tr\xED \u0111\xE3
-    \u0111\u1EB7t v\u1EADt"
+  m_text: "\u0110\u1EC3 x\xF3a v\u1EADt, nh\u1EA5n v\xE0o v\u1EADt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6d462cbec328e4148a064678d136feca, type: 2}
   m_sharedMaterial: {fileID: 2942066641762164226, guid: 6d462cbec328e4148a064678d136feca,
