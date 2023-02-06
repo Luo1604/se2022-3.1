@@ -6,6 +6,9 @@ Augmented reality application using ARtoolkit and Unity. Based on model-viewer.
 Compiled for Android, tested on Redmi Note 11.  
 Prefab assets : Neil Armstrong's Spacesuit.  
 
+https://github.com/Unity-Technologies/arfoundation-samples  
+https://github.com/topics/model-viewer  
+
 ## Requirements:
 Any Google Play Services for AR supported device.
 https://developers.google.com/ar/devices
