@@ -1,5 +1,5 @@
 # se2022- Nhóm 3.1: Tìm hiểu 3D/AR với Unity.
-Đề tài: Xây dựng app cho phép xem ở 3D và AR với Unity.
+Đề tài: Xây dựng app cho phép xem model ở 3D và AR với Unity.
 
 ## Description:
 Augmented reality application using ARtoolkit and Unity. Based on model-viewer.  
