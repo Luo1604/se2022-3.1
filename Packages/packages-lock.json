@@ -1,32 +1,19 @@
 {
   "dependencies": {
-    "com.atteneder.gltfast": {
-      "version": "4.9.1",
+    "com.siccity.gltfutility": {
+      "version": "https://github.com/siccity/gltfutility.git",
       "depth": 0,
-      "source": "registry",
+      "source": "git",
       "dependencies": {
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.modules.unitywebrequesttexture": "1.0.0",
-        "com.unity.mathematics": "1.2.6",
-        "com.unity.burst": "1.6.6"
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
       },
-      "url": "https://package.openupm.com"
+      "hash": "96619fcd48ffe5c4ad122837a21601a6f7c20080"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {}
-    },
-    "com.unity.burst": {
-      "version": "1.7.4",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.mathematics": "1.2.1"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.6",
@@ -115,14 +102,14 @@
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -339,6 +326,13 @@
         "com.unity.inputsystem": "1.4.2"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.yasirkula.nativefilepicker": {
+      "version": "https://github.com/yasirkula/UnityNativeFilePicker.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "634be9b273404124e6f707a6228afe7c1c924815"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

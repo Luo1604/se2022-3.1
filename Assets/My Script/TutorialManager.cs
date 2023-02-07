@@ -28,7 +28,7 @@ public class TutorialManager : MonoBehaviour
         ClickEvent();
 
         if (popUpIndex == popUps.Length) {
-            SceneManager.LoadScene("3DScenes");
+            SceneManager.LoadScene("SelectionScene");
         }
     }
 
