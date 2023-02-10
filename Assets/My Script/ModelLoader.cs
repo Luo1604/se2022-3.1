@@ -4,61 +4,53 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using Siccity.GLTFUtility;
+using SimpleFileBrowser;
 
 public class ModelLoader : MonoBehaviour
 {    
-
-    string FileType;
-    
     GameObject wrapper;
-    string filePath;
+    string destinationPath;
 
     private void Start()
     {
-        FileType = NativeFilePicker.ConvertExtensionToFileType("glb");
-        NativeFilePicker.Permission permission = NativeFilePicker.PickFile((path) =>
-			{
-				if( path == null )
-					Debug.Log( "Operation cancelled" );
-				else
-					Debug.Log( "Picked file: " + path );
-                    filePath = path;
-			}, new string[] { FileType } );
+        FileBrowser.SetFilters( true, new FileBrowser.Filter( "Models", ".glb", ".gltf" ));
+        StartCoroutine( ShowLoadDialogCoroutine() );
+
         wrapper = new GameObject
         {
             name = "Model"
         };
-        LoadModel(filePath);
     }
 
-    string GetFilePath(string url)
-    {
-        string[] pieces = url.Split('/');
-        string filename = pieces[pieces.Length - 1];
+    IEnumerator ShowLoadDialogCoroutine()
+	{
+		yield return FileBrowser.WaitForLoadDialog( FileBrowser.PickMode.FilesAndFolders, true, null, null, "Load Files and Folders", "Load" );
 
-        return $"{filePath}{filename}";
-    }
+		Debug.Log( FileBrowser.Success );
+
+		if( FileBrowser.Success )
+		{
+            Debug.Log("SAF:" + FileBrowser.Result[0]);
+            destinationPath = Path.Combine(Application.persistentDataPath, FileBrowserHelpers.GetFilename(FileBrowser.Result[0]));
+            FileBrowserHelpers.CopyFile(FileBrowser.Result[0], destinationPath);
+            Debug.Log("Copied and loaded from new path:" + destinationPath);
+		}
+        
+        Debug.Log( "Object created! Begin loading model!");
+        LoadModel(destinationPath);
+	}
 
     void LoadModel(string path)
     {
         ResetWrapper();
         GameObject model = Importer.LoadFromFile(path);
+        Debug.Log( "Model loaded!");
         model.transform.SetParent(wrapper.transform);
 
         wrapper.AddComponent<Rotation3D>();
         wrapper.transform.position = new Vector3(0, -3, 0);
         wrapper.transform.localScale = new Vector3(4f, 4f, 4f);
         wrapper.transform.Rotate(0f, -180f, 0f); 
-    }
-
-    IEnumerator GetFileRequest(string url, Action<UnityWebRequest> callback)
-    {
-        using(UnityWebRequest req = UnityWebRequest.Get(url))
-        {
-            req.downloadHandler = new DownloadHandlerFile(GetFilePath(url));
-            yield return req.SendWebRequest();
-            callback(req);
-        }
     }
 
     void ResetWrapper()
