@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-using Siccity.GLTFUtility;
 
 [RequireComponent(typeof(ARRaycastManager))]
 [RequireComponent(typeof(ARAnchorManager))]
 [RequireComponent(typeof(ARPlaneManager))]
-public class PlacementControler : MonoBehaviour
+public class PlacementControlerDEF : MonoBehaviour
 {
     // comment
+    [SerializeField]
     private GameObject prefabToPlace;
     
     ARAnchorManager anchorManager;
@@ -23,17 +23,6 @@ public class PlacementControler : MonoBehaviour
         arRaycastManager = GetComponent<ARRaycastManager>();
         anchorManager = GetComponent<ARAnchorManager>();
 
-        LoadModel(PlayerPrefs.GetString("path"));
-    }
-
-    void LoadModel(string path)
-    {
-        // ??? EDIT THIS PLEASE ???
-        prefabToPlace = Importer.LoadFromFile(path);
-        Debug.Log( "Model loaded!");
-
-        CapsuleCollider sc = prefabToPlace.AddComponent(typeof(CapsuleCollider)) as CapsuleCollider;
-        prefabToPlace.GetComponentsInChildren<MeshRenderer>();
     }
 
     private bool TryGetTouchPosition(out Vector2 touchPosition)

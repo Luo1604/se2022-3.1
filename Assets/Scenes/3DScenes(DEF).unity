@@ -226,8 +226,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 189025631}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_TargetAssemblyTypeName: ChangeToAR, Assembly-CSharp
+        m_MethodName: ChangeARdef
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

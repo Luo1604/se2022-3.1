@@ -40,6 +40,11 @@ public class ModelLoader : MonoBehaviour
         LoadModel(destinationPath);
 	}
 
+    float getHeight() 
+    {
+        return Camera.main.orthographicSize *2f;
+    }
+
     void LoadModel(string path)
     {
         ResetWrapper();
@@ -51,8 +56,13 @@ public class ModelLoader : MonoBehaviour
         model.transform.SetParent(wrapper.transform);
 
         wrapper.AddComponent<Rotation3D>();
-        wrapper.transform.position = new Vector3(0, -3, 0);
-        wrapper.transform.localScale = new Vector3(4f, 4f, 4f);
+
+        // Auto scale(approximately)
+        Vector3 xyz = wrapper.GetComponentInChildren<MeshFilter>().mesh.bounds.size;
+        Debug.Log("SiZE: " + xyz);
+        float scale = getHeight() / xyz.x * 0.6f;
+        
+        wrapper.transform.localScale = new Vector3(scale, scale, scale);
         wrapper.transform.Rotate(0f, -180f, 0f); 
     }
 
