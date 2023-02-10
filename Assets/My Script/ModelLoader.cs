@@ -45,6 +45,9 @@ public class ModelLoader : MonoBehaviour
         ResetWrapper();
         GameObject model = Importer.LoadFromFile(path);
         Debug.Log( "Model loaded!");
+
+        // Saved path for AR
+        PlayerPrefs.SetString("path", path);
         model.transform.SetParent(wrapper.transform);
 
         wrapper.AddComponent<Rotation3D>();

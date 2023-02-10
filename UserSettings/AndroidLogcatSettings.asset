@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "b8f0f441",
         "name": "com.hang",
-        "processId": 24510,
+        "processId": 20991,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -17,31 +17,37 @@
         {
             "deviceId": "b8f0f441",
             "name": "com.hang",
-            "processId": 4572,
-            "exited": true
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.hang",
-            "processId": 7180,
-            "exited": true
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.hang",
-            "processId": 17668,
-            "exited": true
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.hang",
-            "processId": 19004,
-            "exited": true
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.hang",
             "processId": 24510,
+            "exited": true
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.hang",
+            "processId": 6724,
+            "exited": true
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.xiaomi.account",
+            "processId": 5845,
+            "exited": false
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.hang",
+            "processId": 15786,
+            "exited": true
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.hang",
+            "processId": 16390,
+            "exited": true
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.hang",
+            "processId": 20991,
             "exited": false
         }
     ],
