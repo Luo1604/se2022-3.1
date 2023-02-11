@@ -21,7 +21,7 @@ public class FadeScrpit : MonoBehaviour
         {
             if (myUIGroup.alpha < 1)
             {
-                myUIGroup.alpha += Time.deltaTime;
+                myUIGroup.alpha += Time.deltaTime*0.8f;
                 if (myUIGroup.alpha >= 1)
                 {
                     fadeIn = false;

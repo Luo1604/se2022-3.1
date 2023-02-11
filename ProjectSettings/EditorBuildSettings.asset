@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/test.unity
     guid: 479c01fbddb3ea749af2f1b9ff312c7f
   - enabled: 1
-    path: Assets/Scenes/3DScenes.unity
+    path: Assets/Scenes/SelectionScene.unity
+    guid: 94d3e1a86a2cc13489e873cb680697b4
+  - enabled: 1
+    path: Assets/Scenes/3DScenes(DEF).unity
     guid: 07c0b6ee8eec516428f60e72cc4a0cad
   - enabled: 1
-    path: Assets/Scenes/ARscenes.unity
+    path: Assets/Scenes/3DScenes(Custom).unity
+    guid: 9cf715c674c81394b9e163944504fa73
+  - enabled: 1
+    path: Assets/Scenes/ARscenes(Custom).unity
     guid: 0b1cf66d2ce0f8546a92b6ca58192cef
+  - enabled: 1
+    path: Assets/Scenes/ARscenes(DEF).unity
+    guid: 9e340a536573c0047a2e8ffd5e20ba9d
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 89a6d18d3df8d3e4fa917b0f9a963bc0,
       type: 2}
