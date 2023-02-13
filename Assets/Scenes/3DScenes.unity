@@ -712,6 +712,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0221b09788a1187418f3857143a35d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 1146152536}
+  target: {fileID: 874042711}
+  distanceToTarget: 10
+--- !u!4 &874042711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 528627179007560875, guid: ddc8c0d00010be746a24d748e94169d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 874042708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1146152534
 GameObject:
   m_ObjectHideFlags: 0
