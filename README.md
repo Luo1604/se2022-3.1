@@ -32,12 +32,12 @@ Load được file .glb và .gltf và hiển thị được nó dạng 3D.
 
 Hiển thị các model 3D đã nêu trên bằng AR(Augmented Reality).
 
-## Result:
+## Results:
 Load được các file .glb và .gltf lưu trữ trên các thiết bị Android phù hợp.
 
 Hiển thị dạng 3D với các thao tác đơn giản trên model như xoay, phóng to.
 
-Quét mặt phẳng không gian thực và cố định model trên mặt phẳng đó, xóa model khị chạm vào.
+Quét mặt phẳng không gian thực và cố định model trên mặt phẳng đó, xóa model khi chạm vào.
 
 ## Reference:
 Unity Package đã sử dụng (ngoài AR Foundation và các gói AR tích hợp trên Unity):
