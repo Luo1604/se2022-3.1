@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "b8f0f441",
     "m_SelectedPackage": {
         "deviceId": "b8f0f441",
-        "name": "com.hang",
-        "processId": 20991,
+        "name": "com.basicar",
+        "processId": 13229,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,24 +12,6 @@
             "deviceId": "b8f0f441",
             "name": "com.miui.home",
             "processId": 8373,
-            "exited": false
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.hang",
-            "processId": 24510,
-            "exited": true
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.hang",
-            "processId": 6724,
-            "exited": true
-        },
-        {
-            "deviceId": "b8f0f441",
-            "name": "com.xiaomi.account",
-            "processId": 5845,
             "exited": false
         },
         {
@@ -48,6 +30,18 @@
             "deviceId": "b8f0f441",
             "name": "com.hang",
             "processId": 20991,
+            "exited": true
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.basicar",
+            "processId": 5038,
+            "exited": true
+        },
+        {
+            "deviceId": "b8f0f441",
+            "name": "com.basicar",
+            "processId": 13229,
             "exited": false
         }
     ],
