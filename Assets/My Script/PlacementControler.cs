@@ -37,6 +37,7 @@ public class PlacementControler : MonoBehaviour
         prefabToPlace = model;
 
         prefabToPlace.transform.position = new Vector3(1000, 1000, 100);
+        prefabToPlace.transform.Rotate(0f, -180f, 0f); 
 
         CapsuleCollider cp = prefabToPlace.AddComponent<CapsuleCollider>();
         cp.center = new Vector3(0f, 1f, 0f);
