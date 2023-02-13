@@ -29,18 +29,25 @@ Phiên bản Unity phù hợp 2021.2+
 
 ## Goals:
 Load được file .glb và .gltf và hiển thị được nó dang 3D.
+
 Hiển thị các model 3D đã nêu trên bằng AR(Augmented Reality).
 
 ## Result:
 Load được các file .glb và .gltf lưu trữ trên các thiết bị Android phù hợp.
+
 Hiển thị dạng 3D với các thao tác đơn giản trên model như xoay, phóng to.
+
 Quét mập phẳng không gian thực và đặt được model trên mặt phẳng đó.
 
 ## Reference:
 Unity Package đã sử dụng (ngoài AR Foundation và các gói AR tích hợp trên Unity):
+
 GLTFUtility: Cho phép bạn import và export các tệp glTF, glb trong thời gian chạy và trong trình chỉnh sửa.
+
 https://github.com/Siccity/GLTFUtility
+
 UnitySimpleFileBrowser: Cho phép chọn tệp và lấy đường dẫn của tệp đó trên thiết bị của bạn
+
 https://github.com/yasirkula/UnitySimpleFileBrowser
 
 ## Screenshots:
