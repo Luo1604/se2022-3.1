@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using Siccity.GLTFUtility;
 
 [RequireComponent(typeof(ARRaycastManager))]
 [RequireComponent(typeof(ARAnchorManager))]
 [RequireComponent(typeof(ARPlaneManager))]
-public class PlacementControlerDEF : MonoBehaviour
+public class PlacementControler : MonoBehaviour
 {
-    // comment
-    [SerializeField]
+    [SerializeField] private GameObject prefab;
     private GameObject prefabToPlace;
     
     ARAnchorManager anchorManager;
@@ -23,6 +23,25 @@ public class PlacementControlerDEF : MonoBehaviour
         arRaycastManager = GetComponent<ARRaycastManager>();
         anchorManager = GetComponent<ARAnchorManager>();
 
+        if (PlayerPrefs.GetInt("type") == 1) 
+        {
+            LoadModel(PlayerPrefs.GetString("path"));
+        }
+    }
+
+    void LoadModel(string path)
+    {
+        GameObject model = Importer.LoadFromFile(path);
+        Debug.Log("Model loaded!");
+
+        prefabToPlace = model;
+
+        prefabToPlace.transform.position = new Vector3(1000, 1000, 100);
+
+        CapsuleCollider cp = prefabToPlace.AddComponent<CapsuleCollider>();
+        cp.center = new Vector3(0f, 1f, 0f);
+        cp.radius = 1f;
+        cp.height = 2f;
     }
 
     private bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -69,10 +88,29 @@ public class PlacementControlerDEF : MonoBehaviour
         ARAnchor anchor;
 
         ARPlane hitPlane = (ARPlane)hit.trackable;
-        anchorManager.anchorPrefab = prefabToPlace;
+
+        if (PlayerPrefs.GetInt("type") == 0) 
+        {
+            Debug.Log("Default.");
+            anchorManager.anchorPrefab = prefab;
+        }
+        else
+        {
+            Debug.Log("From file.");
+            anchorManager.anchorPrefab = prefabToPlace;
+        }
+        
         Pose pose = hit.pose;
-        var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
-        pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
+        if (PlayerPrefs.GetInt("type") == 0) 
+        {
+            var rotationPose = prefab.GetComponent<Transform>().rotation;
+            pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
+        }
+        else
+        {
+            var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
+            pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
+        }
         anchor = anchorManager.AttachAnchor(hitPlane, hit.pose);
         anchorManager.anchorPrefab = null;
 

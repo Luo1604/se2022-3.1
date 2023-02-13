@@ -210,7 +210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 314970339}
         m_TargetAssemblyTypeName: ChangeTo3D, Assembly-CSharp
-        m_MethodName: Change3Dcus
+        m_MethodName: FromFile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -629,7 +629,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 787369248}
         m_TargetAssemblyTypeName: ChangeTo3D, Assembly-CSharp
-        m_MethodName: Change3Ddef
+        m_MethodName: FromDefault
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

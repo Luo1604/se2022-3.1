@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ChangeTo3D : MonoBehaviour
 {
-    public void Change3Ddef()
+    public void FromDefault()
     {
-        SceneManager.LoadScene("3DScenes(DEF)");
+        SceneManager.LoadScene("3DScenes");
+        PlayerPrefs.SetInt("type", 0);
     }
 
-    public void Change3Dcus()
+    public void FromFile()
     {
-        SceneManager.LoadScene("3DScenes(Custom)");
+        SceneManager.LoadScene("3DScenes");
+        PlayerPrefs.SetInt("type", 1);
     }
 }

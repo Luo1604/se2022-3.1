@@ -5,13 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeToAR : MonoBehaviour
 {
-    public void ChangeARdef()
+    public void ChangeAR()
     {
-        SceneManager.LoadScene("ARscenes(DEF)");
-    }
-
-    public void ChangeARcus()
-    {
-        SceneManager.LoadScene("ARscenes(Custom)");
+        SceneManager.LoadScene("ARscenes");
     }
 }

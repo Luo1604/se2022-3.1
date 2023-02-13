@@ -8,18 +8,26 @@ using SimpleFileBrowser;
 
 public class ModelLoader : MonoBehaviour
 {    
+    [SerializeField] private GameObject defaultModel;
     GameObject wrapper;
     string destinationPath;
 
     private void Start()
     {
-        FileBrowser.SetFilters( true, new FileBrowser.Filter( "Models", ".glb", ".gltf" ));
-        StartCoroutine( ShowLoadDialogCoroutine() );
-
-        wrapper = new GameObject
+        if (PlayerPrefs.GetInt("type") == 0) 
         {
-            name = "Model"
-        };
+            defaultModel.SetActive(true);
+        }
+        else
+        {
+            FileBrowser.SetFilters( true, new FileBrowser.Filter( "Models", ".glb", ".gltf" ));
+            StartCoroutine( ShowLoadDialogCoroutine() );
+
+            wrapper = new GameObject
+            {
+                name = "Model"
+            };
+        }
     }
 
     IEnumerator ShowLoadDialogCoroutine()
@@ -64,6 +72,7 @@ public class ModelLoader : MonoBehaviour
         
         wrapper.transform.localScale = new Vector3(scale, scale, scale);
         wrapper.transform.Rotate(0f, -180f, 0f); 
+        wrapper.transform.position = new Vector3(0, -2f, 0);
     }
 
     void ResetWrapper()

@@ -104,7 +104,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -120,6 +120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeilArmstrong
+      objectReference: {fileID: 0}
+    - target: {fileID: -3486144831544470063, guid: ddc8c0d00010be746a24d748e94169d8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 528627179007560875, guid: ddc8c0d00010be746a24d748e94169d8,
         type: 3}
