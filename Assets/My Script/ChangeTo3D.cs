@@ -16,4 +16,9 @@ public class ChangeTo3D : MonoBehaviour
         SceneManager.LoadScene("3DScenes");
         PlayerPrefs.SetInt("type", 1);
     }
+
+    public void ChangeSelection()
+    {
+        SceneManager.LoadScene("SelectionScene");
+    }
 }
