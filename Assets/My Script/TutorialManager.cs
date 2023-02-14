@@ -11,7 +11,11 @@ public class TutorialManager : MonoBehaviour
 
     void Start() 
     {
-        
+        PlayerPrefs.SetInt("times", PlayerPrefs.GetInt("times") + 1);
+        if (PlayerPrefs.GetInt("times") > 1)
+        {
+            SceneManager.LoadScene("SelectionScene");
+        }
     }
 
     // Update is called once per frame

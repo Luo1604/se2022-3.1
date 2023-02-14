@@ -57,6 +57,7 @@ public class ModelLoader : MonoBehaviour
     {
         ResetWrapper();
         GameObject model = Importer.LoadFromFile(path);
+        model.AddComponent<MeshRenderer>();
         Debug.Log( "Model loaded!");
 
         // Saved path for AR

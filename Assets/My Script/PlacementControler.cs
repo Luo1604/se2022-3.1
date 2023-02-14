@@ -32,6 +32,7 @@ public class PlacementControler : MonoBehaviour
     void LoadModel(string path)
     {
         GameObject model = Importer.LoadFromFile(path);
+        model.AddComponent<MeshRenderer>();
         Debug.Log("Model loaded!");
 
         prefabToPlace = model;
