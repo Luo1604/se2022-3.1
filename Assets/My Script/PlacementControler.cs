@@ -28,8 +28,11 @@ public class PlacementControler : MonoBehaviour
             LoadModel(PlayerPrefs.GetString("path"));
         } else
         {
-            MeshCollider mc = prefab.AddComponent<MeshCollider>();
-            mc.convex = true;
+            Mesh mesh = prefab.GetComponent<MeshFilter>().mesh;
+            CapsuleCollider cp = prefab.AddComponent<CapsuleCollider>();
+            cp.center = mesh.bounds.center;
+            cp.radius = mesh.bounds.size.x;
+            cp.height = mesh.bounds.size.y;
         }
     }
 
@@ -42,9 +45,14 @@ public class PlacementControler : MonoBehaviour
         prefabToPlace = model;
 
         prefabToPlace.transform.position = new Vector3(1000, 1000, 100);
-        prefabToPlace.transform.rotation = Quaternion.Euler(0, 45, 0);
-        MeshCollider mc = model.AddComponent<MeshCollider>();
-        mc.convex = true;
+        prefabToPlace.GetComponent<Transform>().rotation = prefab.GetComponent<Transform>().rotation;
+
+        Mesh mesh = prefabToPlace.GetComponent<MeshFilter>().mesh;
+        CapsuleCollider cp = prefabToPlace.AddComponent<CapsuleCollider>();
+        cp.center = mesh.bounds.center;
+        cp.radius = mesh.bounds.size.x;
+        cp.height = mesh.bounds.size.y;
+     
     }
 
     private bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -107,12 +115,12 @@ public class PlacementControler : MonoBehaviour
         Pose pose = hit.pose;
         if (PlayerPrefs.GetInt("type") == 0)
         {
-            var rotationPose = prefab.GetComponent<Transform>().rotation;
+            var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
             pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
         }
         else
         {
-            var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
+            var rotationPose = prefab.GetComponent<Transform>().rotation;
             pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
         }
         anchor = anchorManager.AttachAnchor(hitPlane, hit.pose);
