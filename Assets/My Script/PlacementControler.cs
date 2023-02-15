@@ -26,7 +26,8 @@ public class PlacementControler : MonoBehaviour
         if (PlayerPrefs.GetInt("type") == 1)
         {
             LoadModel(PlayerPrefs.GetString("path"));
-        } else
+        }
+        else
         {
             Mesh mesh = prefab.GetComponent<MeshFilter>().mesh;
             CapsuleCollider cp = prefab.AddComponent<CapsuleCollider>();
@@ -45,14 +46,13 @@ public class PlacementControler : MonoBehaviour
         prefabToPlace = model;
 
         prefabToPlace.transform.position = new Vector3(1000, 1000, 100);
-        prefabToPlace.GetComponent<Transform>().rotation = prefab.GetComponent<Transform>().rotation;
 
         Mesh mesh = prefabToPlace.GetComponent<MeshFilter>().mesh;
         CapsuleCollider cp = prefabToPlace.AddComponent<CapsuleCollider>();
         cp.center = mesh.bounds.center;
         cp.radius = mesh.bounds.size.x;
         cp.height = mesh.bounds.size.y;
-     
+
     }
 
     private bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -120,7 +120,7 @@ public class PlacementControler : MonoBehaviour
         }
         else
         {
-            var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
+            var rotationPose = prefab.GetComponent<Transform>().rotation;
             pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
         }
         anchor = anchorManager.AttachAnchor(hitPlane, hit.pose);

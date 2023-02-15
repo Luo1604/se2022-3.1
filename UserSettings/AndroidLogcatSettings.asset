@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "1244ad94",
         "name": "com.basicar",
-        "processId": 14440,
+        "processId": 21574,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -47,24 +47,6 @@
         {
             "deviceId": "1244ad94",
             "name": "com.basicar",
-            "processId": 24423,
-            "exited": true
-        },
-        {
-            "deviceId": "1244ad94",
-            "name": "com.basicar",
-            "processId": 28484,
-            "exited": true
-        },
-        {
-            "deviceId": "1244ad94",
-            "name": "com.basicar",
-            "processId": 1000,
-            "exited": true
-        },
-        {
-            "deviceId": "1244ad94",
-            "name": "com.basicar",
             "processId": 7614,
             "exited": true
         },
@@ -72,12 +54,42 @@
             "deviceId": "1244ad94",
             "name": "com.miui.home",
             "processId": 2087,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "1244ad94",
             "name": "com.basicar",
             "processId": 14440,
+            "exited": true
+        },
+        {
+            "deviceId": "1244ad94",
+            "name": "com.basicar",
+            "processId": 19173,
+            "exited": true
+        },
+        {
+            "deviceId": "1244ad94",
+            "name": "com.miui.home",
+            "processId": 17298,
+            "exited": false
+        },
+        {
+            "deviceId": "1244ad94",
+            "name": "com.basicar",
+            "processId": 7812,
+            "exited": false
+        },
+        {
+            "deviceId": "1244ad94",
+            "name": "com.basicar",
+            "processId": 16241,
+            "exited": false
+        },
+        {
+            "deviceId": "1244ad94",
+            "name": "com.basicar",
+            "processId": 21574,
             "exited": false
         }
     ],
