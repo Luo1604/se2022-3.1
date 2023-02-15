@@ -56,7 +56,7 @@ https://github.com/yasirkula/UnitySimpleFileBrowser
 
 ## Screenshots:
 3D viewing mode:  
-![image](https://user-images.githubusercontent.com/92431917/216575542-fd05d350-dd19-4a4c-81fb-48c3603c161c.png)
+![image](https://user-images.githubusercontent.com/92431917/219065538-2b41e753-f097-4829-a9e1-59373ba1dedb.png)
 
 AR viewing mode:  
 ![image](https://user-images.githubusercontent.com/92431917/216575757-b118e5c5-ce8a-4532-9750-d9879a9c073a.png)
