@@ -115,12 +115,12 @@ public class PlacementControler : MonoBehaviour
         Pose pose = hit.pose;
         if (PlayerPrefs.GetInt("type") == 0)
         {
-            var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
+            var rotationPose = prefab.GetComponent<Transform>().rotation;
             pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
         }
         else
         {
-            var rotationPose = prefab.GetComponent<Transform>().rotation;
+            var rotationPose = prefabToPlace.GetComponent<Transform>().rotation;
             pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);
         }
         anchor = anchorManager.AttachAnchor(hitPlane, hit.pose);
