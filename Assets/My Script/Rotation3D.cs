@@ -5,8 +5,8 @@ using UnityEngine;
 public class Rotation3D : MonoBehaviour
 {
     private Touch touch;
-    [SerializeField] private Camera cam;
-    [SerializeField] private Transform target;
+    public Camera cam;
+    public Transform target;
     [SerializeField] private float distanceToTarget = 10;
     
     private Vector3 previousPosition;
@@ -42,4 +42,3 @@ public class Rotation3D : MonoBehaviour
         }
     }
 }
-
