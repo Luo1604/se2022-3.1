@@ -1,11 +1,11 @@
 # se2022- Nhóm 3.1: Tìm hiểu 3D/AR với Unity.
-<a href = "pulls">
+<a href = "https://github.com/Luo1604/se2022-3.1/pulls">
   <img alt="GitHub pull requests" src=https://img.shields.io/github/issues-pr/Luo1604/se2022-3.1>
 </a>
-<a href= "issues">
+<a href= "https://github.com/Luo1604/se2022-3.1/issues">
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/Luo1604/se2022-3.1?style=plastic">
 </a>
-<a href= "closed">
+<a href= "https://github.com/Luo1604/se2022-3.1/issues?q=is%3Aissue+is%3Aclosed">
   <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Luo1604/se2022-3.1">
 </a>
 <a href = "repo">
