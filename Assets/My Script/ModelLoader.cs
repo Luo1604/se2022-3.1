@@ -8,6 +8,7 @@ using SimpleFileBrowser;
 
 public class ModelLoader : MonoBehaviour
 {    
+    [SerializeField] private GameObject plane;
     [SerializeField] private GameObject defaultModel;
     GameObject wrapper;
     string destinationPath;
@@ -64,16 +65,21 @@ public class ModelLoader : MonoBehaviour
         PlayerPrefs.SetString("path", path);
         model.transform.SetParent(wrapper.transform);
 
-        wrapper.AddComponent<Rotation3D>();
+        Rotation3D rt = wrapper.AddComponent<Rotation3D>();
+        rt.target = wrapper.transform;
+        rt.cam = Camera.main;
 
         // Auto scale(approximately)
         Vector3 xyz = wrapper.GetComponentInChildren<MeshFilter>().mesh.bounds.size;
         Debug.Log("SiZE: " + xyz);
-        float scale = getHeight() / xyz.x * 0.6f;
+        Debug.Log("cam height: " + getHeight());
+        float scale = getHeight() / xyz.y * 0.6f;
         
         wrapper.transform.localScale = new Vector3(scale, scale, scale);
         wrapper.transform.Rotate(0f, -180f, 0f); 
-        wrapper.transform.position = new Vector3(0, -2f, 0);
+        wrapper.transform.position = new Vector3(0, -1f, 0);
+
+        plane.transform.position = new Vector3(0, -1.3f, 0);
     }
 
     void ResetWrapper()
