@@ -13,7 +13,7 @@ public class PlacementControler : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;
     private GameObject prefabToPlace;
-    
+
     ARAnchorManager anchorManager;
     ARRaycastManager arRaycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -23,9 +23,13 @@ public class PlacementControler : MonoBehaviour
         arRaycastManager = GetComponent<ARRaycastManager>();
         anchorManager = GetComponent<ARAnchorManager>();
 
-        if (PlayerPrefs.GetInt("type") == 1) 
+        if (PlayerPrefs.GetInt("type") == 1)
         {
             LoadModel(PlayerPrefs.GetString("path"));
+        } else
+        {
+            MeshCollider mc = prefab.AddComponent<MeshCollider>();
+            mc.convex = true;
         }
     }
 
@@ -38,12 +42,9 @@ public class PlacementControler : MonoBehaviour
         prefabToPlace = model;
 
         prefabToPlace.transform.position = new Vector3(1000, 1000, 100);
-        prefabToPlace.transform.Rotate(0f, -180f, 0f); 
-
-        CapsuleCollider cp = prefabToPlace.AddComponent<CapsuleCollider>();
-        cp.center = new Vector3(0f, 1f, 0f);
-        cp.radius = 1f;
-        cp.height = 2f;
+        prefabToPlace.transform.rotation = Quaternion.Euler(0, 45, 0);
+        MeshCollider mc = model.AddComponent<MeshCollider>();
+        mc.convex = true;
     }
 
     private bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -68,21 +69,22 @@ public class PlacementControler : MonoBehaviour
 
         if (arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
-            
+
             var hitPose = hits[0].pose;
             CreateAnchor(hits[0]);
-           
-        } else if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+
+        }
+        else if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             Destroy(hit.transform.gameObject);
-            
-        } 
-        else 
+
+        }
+        else
         {
             SSTools.ShowMessage("Model phải được đặt trên mặt phẳng", SSTools.Position.bottom, SSTools.Time.twoSecond);
         }
 
-        
+
     }
 
     private ARAnchor CreateAnchor(in ARRaycastHit hit)
@@ -91,7 +93,7 @@ public class PlacementControler : MonoBehaviour
 
         ARPlane hitPlane = (ARPlane)hit.trackable;
 
-        if (PlayerPrefs.GetInt("type") == 0) 
+        if (PlayerPrefs.GetInt("type") == 0)
         {
             Debug.Log("Default.");
             anchorManager.anchorPrefab = prefab;
@@ -101,9 +103,9 @@ public class PlacementControler : MonoBehaviour
             Debug.Log("From file.");
             anchorManager.anchorPrefab = prefabToPlace;
         }
-        
+
         Pose pose = hit.pose;
-        if (PlayerPrefs.GetInt("type") == 0) 
+        if (PlayerPrefs.GetInt("type") == 0)
         {
             var rotationPose = prefab.GetComponent<Transform>().rotation;
             pose.rotation = Quaternion.Euler(rotationPose.x, rotationPose.y, rotationPose.z);

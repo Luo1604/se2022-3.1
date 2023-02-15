@@ -9,10 +9,10 @@ public class TutorialManager : MonoBehaviour
     public GameObject[] popUps;
     private int popUpIndex;
 
-    void Start() 
+    void Awake() 
     {
-        PlayerPrefs.SetInt("times", PlayerPrefs.GetInt("times") + 1);
-        if (PlayerPrefs.GetInt("times") > 1)
+ 
+        if (PlayerPrefs.GetInt("times") == 1)
         {
             SceneManager.LoadScene("SelectionScene");
         }
@@ -32,6 +32,7 @@ public class TutorialManager : MonoBehaviour
         ClickEvent();
 
         if (popUpIndex == popUps.Length) {
+            PlayerPrefs.SetInt("times", 1);
             SceneManager.LoadScene("SelectionScene");
         }
     }
